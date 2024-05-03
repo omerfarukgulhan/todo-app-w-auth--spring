@@ -1,4 +1,4 @@
-package com.todo.config.exception;
+package com.todo.exception;
 
 public class UnauthorizedException extends RuntimeException {
     public UnauthorizedException() {

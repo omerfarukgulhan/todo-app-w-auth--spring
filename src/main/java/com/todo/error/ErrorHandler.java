@@ -1,7 +1,7 @@
 package com.todo.error;
 
-import com.todo.config.exception.UnauthorizedException;
-import com.todo.todo.exception.NotFoundException;
+import com.todo.exception.UnauthorizedException;
+import com.todo.exception.NotFoundException;
 import com.todo.util.ApiResponse;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -12,7 +12,6 @@ import javax.naming.AuthenticationException;
 
 @RestControllerAdvice
 public class ErrorHandler extends ResponseEntityExceptionHandler {
-
     @ExceptionHandler({
             NotFoundException.class,
             AuthenticationException.class,
@@ -27,7 +26,7 @@ public class ErrorHandler extends ResponseEntityExceptionHandler {
         } else if (exception instanceof AuthenticationException) {
             apiError.setStatus(403);
             apiError.setMessage("deneme");
-        }else if (exception instanceof UnauthorizedException) {
+        } else if (exception instanceof UnauthorizedException) {
             apiError.setStatus(403);
             apiError.setMessage("UnauthorizedException deneme");
         }

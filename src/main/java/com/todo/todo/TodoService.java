@@ -1,7 +1,7 @@
 package com.todo.todo;
 
 import com.todo.todo.dto.TodoUpdate;
-import com.todo.todo.exception.NotFoundException;
+import com.todo.exception.NotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
